@@ -2,6 +2,8 @@
 
 This project demonstrates proper OpenGL 3.2 custom shader support combined with the OpenCL/OpenGL "interop" functionality. Though there are few comments, the code has been designed to be relatively easy to use and understand, and largely portable. Aside from a few platform-specific issues (chiefly among them being the hardcoded `$PLATFORM` variable in `run.sh`) the code should work on most platforms.
 
+Perhaps the only "gotcha" is the auto-generated source file `src/Shaders.java`. Perhaps impulsively, the code ends up constructing it in a shell script that then compiles it into a Java class. The reason for this was simplicity: the entire project can be contained in several JARs and a collection of native libraries. Compilation on non-POSIX platforms might get tricky, however...
+
 In terms of licensing, all files in `lib/` and `ext/` are covered under the LWJGL license in `doc/LWJGL_License.txt`. All files included in `src/`, and `classes/` are under the following license. Naturally, if another license is preferable, then naturally I am open to suggestions.
 
 ## License
